@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>BMI 계산</title>
+<title>계산기</title>
 <!-- bootstrap CDN link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -13,19 +13,40 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
+	<%
+		int number1 = Integer.valueOf(request.getParameter("first"));
+		int number2 = Integer.valueOf(request.getParameter("second"));
+		String operator = request.getParameter("operator");
+		double result = 0;
+		String op = null;
+		
+		switch (operator) {
+		case "addition" :
+			result = (double)number1 + number2;
+			op = "+";
+			break;
+		case "subtraction" :
+			result = (double)number1 - number2;
+			op = "-";
+			break;
+		case "multiplication" :
+			result = (double)number1 * number2;
+			op = "X";
+			break;
+		case "division" :
+			result = (double)number1 / number2;
+			op = "/";
+			break;
+		}
+	%>
 	<div class="container">
-		<h1>체격 조건 입력</h1>
-		<form method="get" action="/lesson02/quiz03_1.jsp">
-			<div class="d-flex align-items-end">
-				<input type="text" class="form-control col-2" name="height" id="height" placeholder="키를 입력하세요.">
-				<span class="ml-2 mr-2">cm</span>
-				<input type="text" class="form-control col-2" name="weight" id="weight" placeholder="몸무게를 입력하세요.">
-				<span class="ml-2 mr-2">kg</span>
-				<input type="submit" class="btn btn-info" name="calculate" value="계산">
-				
-			</div>
-		</form>
+		<h1>계산 결과</h1>
+		<h1 class="display-4">
+			<%
+				out.print(number1 + " " + op + " " + number2 + " " + "=" + " ");
+			%>
+			<span class="text-primary"><%= result%></span>
+		</h1>
 	</div>
-
 </body>
 </html>

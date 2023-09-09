@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>BMI 계산</title>
+<title>길이 변환</title>
 <!-- bootstrap CDN link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -14,18 +14,20 @@
 </head>
 <body>
 	<div class="container">
-		<h1>체격 조건 입력</h1>
-		<form method="get" action="/lesson02/quiz03_1.jsp">
+		<h1>길이 변환</h1>
+		<form method="post" action="/lesson02/quiz04_1.jsp">
 			<div class="d-flex align-items-end">
-				<input type="text" class="form-control col-2" name="height" id="height" placeholder="키를 입력하세요.">
-				<span class="ml-2 mr-2">cm</span>
-				<input type="text" class="form-control col-2" name="weight" id="weight" placeholder="몸무게를 입력하세요.">
-				<span class="ml-2 mr-2">kg</span>
-				<input type="submit" class="btn btn-info" name="calculate" value="계산">
-				
+				<input type="text" class="form-control col-2" name="length" id="length">
+				<span class="ml-2">cm</span>
 			</div>
+			<div class="mt-2">
+				<label>인치<input type="checkbox" class="ml-1" name="type" value="inch"></label>
+				<label>야드<input type="checkbox" class="ml-1" name="type" value="yard"></label>
+				<label>피트<input type="checkbox" class="ml-1" name="type" value="feet"></label>
+				<label>미터<input type="checkbox" class="ml-1" name="type" value="meter"></label>
+			</div>
+			<input type="submit" class="btn btn-success" name="transport" value="변환하기">
 		</form>
 	</div>
-
 </body>
 </html>

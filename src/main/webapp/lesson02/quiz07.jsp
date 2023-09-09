@@ -17,7 +17,7 @@
 			<div class="d-flex align-items-center">
 					<input type="text" class="form-control col-4 mr-1" name="keyword" placeholder="치킨">
 					<label class="m-0">
-						<input type="checkbox" name="starFilter" id="starFilter" value="true">
+					<input type="checkbox" name="starFilter" id="starFilter" value="true">
 					 4점 이하 제외</label>
 			</div>
 				<input type="submit" class="btn btn-success mt-1" value="검색" name="search">
