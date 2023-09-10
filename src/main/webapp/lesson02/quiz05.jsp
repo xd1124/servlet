@@ -22,7 +22,7 @@
 					<option value="addition">+</option>
 					<option value="subtraction">-</option>
 					<option value="multiplication">*</option>
-					<option value="division" >/</option>
+					<option value="division">/</option>
 				</select>
 				<input type="text" class="form-control col-2 mr-2" name="second">
 				<input type="submit" class="btn btn-success" value="계산하기">
