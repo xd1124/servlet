@@ -16,6 +16,7 @@
 		<form method="get" action="/lesson02/quiz08_1.jsp">
 			<table class="table text-center">
 				<thead>
+				<%-- row class : 12칸 기준으로 영역을 잡을 수 있다. --%>
 					<tr>
 						<th class="col-2">id</th>
 						<th class="col-2">표지</th>
