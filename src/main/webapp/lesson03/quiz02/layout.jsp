@@ -17,11 +17,8 @@
 		.menu {
 			height : 50px
 		}
-		.information {
-			height : 200px
-		}
-		.list {
-			height : 500px
+		.contents {
+			height : 700px
 		}
 		footer {
 			height : 50px
@@ -35,36 +32,17 @@
 <body>
 	<div id=wrap class="container">
 		<header class="d-flex">
-			<!-- Melong 로고 -->
-			<div class="logo d-flex align-items-center">
-				<h3><a href="quiz02.jsp" class="text-success">Melong</a></h3>
-			</div>
-			<!-- 검색 바 -->
-			<div class="search col-7 d-flex align-items-center ml-5">
-				<div class="search-bar col-9">
-					<div class="input-group">
-						<input type="text" class="form-control">
-						<div class="input-group-append">
-							<button type="button" class="btn btn-info">검색</button>
-						</div>
-					</div>
-				</div>
-			</div>
+			<jsp:include page="header.jsp" />
 		</header>
 		<nav class="menu justify-content-start font-weight-bold align-items-center">
-			<ul class="nav">
-				<li class="nav-item"><a href="#" class="nav-link text-dark">멜롱챠트</a></li>
-				<li class="nav-item"><a href="#" class="nav-link text-dark">최신음악</a></li>
-				<li class="nav-item"><a href="#" class="nav-link text-dark">장르음악</a></li>
-				<li class="nav-item"><a href="#" class="nav-link text-dark">멜롱DJ</a></li>
-				<li class="nav-item"><a href="#" class="nav-link text-dark">뮤직어워드</a></li>
-			</ul>
+			<jsp:include page="nav.jsp" />
 		</nav>
-		<div class="information bg-light">
-			<img src="" alt="" width="">
-		</div>
-		<div class="list bg-success"></div>
-		<footer class="bg-danger"></footer>
+		<section class="contents bg-light">
+			<jsp:include page="section.jsp" />
+		</section>
+		<footer>
+			Copyright 2021. melong All Rights Reserved.
+		</footer>
 	
 	</div>
 </body>
