@@ -52,6 +52,7 @@
 			</div>
 			<div class="recent w-100 pt-5 pr-5">
 				<jsp:include page="recent.jsp" />
+				<!-- 경로 당 만보기(최다 걸음 수) 추가 -->
 			</div>
 		</div>
 	</div>
