@@ -10,7 +10,7 @@
 	<tbody>
 		<tr>
 			<td>1</td>
-			<td>광화문</td>
+			<td><a href="#">광화문</a></td>
 		</tr>
 		<tr>
 			<td>2</td>
